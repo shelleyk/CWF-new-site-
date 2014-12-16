@@ -1,0 +1,508 @@
+@import 'normalize';
+@import 'brand';
+@import 'animate';
+// @import 'mediaquery';
+ 
+
+$basecolor:#666D70;
+$accentcolor:#ff7700;
+// * {
+// 	border:1px solid red;
+// }
+body {
+	background-color: $basecolor;
+	margin:0;
+	padding:0;
+	max-width: 100%;	
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+ .header {
+ 	margin:0;
+ 	padding:0;
+ 	top:0;
+	position: fixed;
+	background-color: white;
+	opacity:.98;
+	z-index: 999;
+	width:100%;
+}
+.logo {
+	background-color: white;
+	display: block;
+ 	text-align: center;
+ 	padding:0;
+ 	margin:0;
+
+ 	 img {
+		// max-width: 80%;
+		height: auto;
+		}
+}
+// top nav
+.nav {
+	width:100%;
+	padding:5px;
+	top:0;
+	text-align:center;
+
+	ul {
+		margin:0;
+		padding:0;
+		list-style-type:none;
+
+		li {
+			display:inline-block;
+			font-size:20px;
+			padding: 0px 10px;
+			margin: 0px 35px;
+			margin-bottom: 0;
+			
+			a {
+				color:black;
+				text-decoration:none;
+				text-transform: uppercase;
+
+				&:hover {
+					color:$accentcolor;
+					text-decoration: bold;
+				}
+			}
+		}
+	}
+}
+// these are the backgrounds for each page
+.main, .dial, .watch, .service {
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50%;
+	height:800px;
+	margin:0;
+	padding:0;
+	display:block;
+	padding-top:250px;
+	max-width: 100%;
+ 	
+}
+// this is my pic for my main page
+.main {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("images/main.jpg");
+} 
+// this is the pic for our story page
+.dial {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("images/villageA.jpg");
+}
+//  this is for my product page 
+.watch {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("images/sidebrown.jpg");
+}
+//  this is my pic for my service page
+.service {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url("images/moveB.jpg");
+}
+//  this is the main section for my core picture on each page 
+
+.title {
+	margin: 0 auto;
+	max-width: 100%;
+	z-index: 999;
+
+
+	h1 {
+		text-shadow: 1px 1px 13px rgba(0, 0, 0, 0.3);
+		font-size: 60px;
+		
+	}
+	h2 {
+		text-shadow: 1px 1px 13px rgba(0, 0, 0, 0.3);
+		font-size: 35px;
+	}
+	.btn {
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+	border: 2px solid white;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: $accentcolor;
+	color:white;
+	}
+
+	a:hover {
+		color:black;
+		background:white;
+	}
+}
+//  this is for my orange line 
+.line {
+		position: relative;
+		height: 1px;
+		overflow: hidden;
+		font-size: 0;
+		line-height: 0;
+		content: '';
+		text-align: center;
+		background:$accentcolor;
+		display: block;
+		width:60%;
+		margin-left: 20%;
+		// margin: 20px 250px 20px;
+		vertical-align: top;
+}
+
+// outline for description for home page
+
+.company { 
+	width:100%;
+	opacity:.4;
+    background-position: center;
+    text-align: center;
+
+	h2 {
+		margin:0 auto;
+		font-size: 30px;
+		color:white;
+		margin:30px;
+	}
+	p { 
+		margin:0 auto;
+		font-size: 18px;
+		color:white;
+		margin:30px;
+		// width:70%;
+	}
+
+}
+// .company1 {
+// 	width:65%
+// }
+
+// .company2 {
+// 	width: 60%;
+// 	text-align: center;
+// }
+
+//  styling for watch page main gallery
+
+.gallery {
+	background:#76776F;
+	padding: 80px 0;
+	text-align: center;
+
+	h2 {
+	text-align: center;
+	color:black;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin:30px;
+	}
+}
+	
+//  this is the area for my pictures and how they reference the sections
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+ 
+// ul.img-list li {
+//   display: inline-block;
+//   margin: 0 1em 1em 0;
+//   position: relative;
+// }
+
+ 
+ul.img-list li:hover span.text-content {
+  opacity: .8;
+  font-size: 18px;
+  color:white;
+}
+ul.img-list li {
+	width: 30%;
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	margin: 0 1%;
+	height: 500px;
+	overflow: hidden;
+	img {
+		display: block;
+		width: 100%;
+	}
+	span {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		left: 0;
+		background: rgba(0,0,0,0.7);
+		padding: 50% 0;
+		display: none;
+	}
+	&:hover span{
+		display: block;
+	}
+
+}
+
+//  for the 3 product  sections
+.item1, .item2, .item3 {
+	margin:0;
+	padding-top:144px;
+	padding-bottom: 90px;
+	border-bottom: 1px solid white;
+}
+.item1, .item3 {
+	background:black;
+}
+//  different color for the middle section
+.item2 {
+	background:#76776F;
+}
+// title for each section
+	 h2 {
+		font-size: 36px; 
+		text-align: center;
+	}
+//  the description section on the left of each product section
+.contentHalf {
+	width:40%;
+	float:left;
+	margin:0 2.5%;
+
+@media(max-width:480px){
+		width: 100%;
+	}
+	
+}
+//  product descripition in a list
+	ol.sport {
+		list-style-type: circle;
+
+		li {
+		line-height: 2;
+		color:white;
+		font-size: 18px;
+		text-align: left;
+		}
+	}
+//  styling for the pictures of the watches on the right hand side
+.gallery2 {
+	
+	.galleryItemB {
+		padding:5px;
+		margin:5px;
+		float:left;
+		text-align: center;
+
+		@media(max-width: 480px){
+			width: 100%;
+
+		}
+	}
+	.gallery2 img {
+			box-shadow: 0px 0px 1px regba(0,0,0,0.7);
+			
+			@media(max-width: 480px){
+				height: auto;
+				width: 100%;
+			}
+
+		}
+ }
+// footer 
+
+.footer {
+	background-color: white;
+	position:relative;
+	padding-top: 160px;	
+
+.contact {
+	float:left;
+	padding:10px;
+	margin:30px;
+	width:45%;
+
+	@media (max-width: 480px) {
+		width: 80%;
+	}
+
+	h2 {
+		color:black;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 22px;
+	}	
+	h3 {
+		color:black;
+		font-size: 18px;
+		text-decoration: none;
+		letter-spacing: 0;
+		text-align: center;
+	}
+	.fa {
+		display:inline-block;
+		font-size: 45px;
+		margin: 10px;
+		margin-top:15px;
+		color: $accentcolor;
+		}
+}
+.left {
+	 width:40%;
+	 float:left; 
+	 margin:30px;
+
+	 @media (max-width: 480px) {
+	 	width: 80%;
+	 }
+
+	h2 {
+		font-size: 22px;
+		text-transform: uppercase;
+		color:black;
+	}
+	.social li {
+		text-align: center;
+		display: inline-block;
+		padding-left: 70px;
+		font-size: 18px;
+		margin:0 auto;
+		
+		.fa {
+			font-size: 30px;
+			color:black;
+		}
+	}
+}
+}
+// copyright line
+.footbottom {
+	h3 {
+		
+		color:white;
+		font-size: 12px;
+		text-align: center;
+	}
+}
+// this is my media query because I could not get it to work in a file
+ @media (max-width: 480px) {
+
+	.nav ul li {
+		display:block;
+		font-size: 12px;	
+	}
+	
+	.title {
+		h1 {
+			font-size: 18px;
+		}
+		h2 {
+			font-size: 14px;
+		}
+	}
+	//  sizing all of the core pics
+	.main {
+		width:100%;
+		height:80%;
+	}
+	.watch, .dial, .service {
+		width: 100%;
+		height:70%;
+	}
+	// sizing for the company section
+	.company {
+		h2 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 12px; 
+		}
+	}
+
+
+	// sizing for the watch page
+	.gallery {
+		padding:5px 0px;
+		padding-left: 10%;
+
+		h2 {
+			font-size: 16px;
+			color:white;
+		}
+		ul.img-list li {
+			width:80%;
+			display:block;
+			// height:300px;
+
+			span {
+				top:230px;
+				background:none;
+			}
+		}
+	}
+	.contentHalf {
+		width:100%;
+	}
+ 	.item1, .item2, .item3 {
+ 		padding-top: 190px;
+ 		h2 {
+			font-size: 16px;
+ 		}
+ 		ol.sport li {
+ 			font-size: 12px;
+ 		}
+ 	}
+
+ 	.footer {
+
+ 		.contact h2 { 
+ 			font-size: 16px;
+ 		}
+ 		.contact h3 {
+ 			font-size: 12px;
+ 		}
+ 		.contact i.fa {
+ 			font-size: 15px;
+ 		}
+ 	
+ 	.left {
+
+ 		h2 {
+ 			font-size: 16px;
+ 		}
+ 		.social li {
+ 			padding-left: 30px;
+ 		} 
+
+ 		.social li .fa {
+ 			font-size: 12px;
+ 		}
+ 	}
+	 }
+ 	.footbottom h3 {
+ 			font-size: 10px;
+ 		}
+ 	
+ 	 
+ 	 
+
+
+
+
+
+
+
+
+
+
+
+}// } I need this for some reason?
